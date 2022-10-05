@@ -11,6 +11,15 @@ import sdeint
   ## Parametros ##
 [ah,b1,b2,b3,a1,a2,fi,t,g,mh,mr,dh,dr,ar,a3] = [0.029,0.00025,0.00006,0.027,0.2,2,2,0.52,0.83,1.5,0.002,0.2,0.5,0.2,4]
 
+sig1=0.0
+sig2=0.0
+sig3=0.0
+sig4=0.0
+sig5=0.0
+sig6=0.0
+sig7=0.0
+sig8=0.0
+
 #0 tasa de reclutamiento en humanos  : ah
 #1 tasa de contacto de roedor a humano : b1
 #2 tasa de contacto humano a humano : b2
@@ -28,23 +37,16 @@ import sdeint
 #14 Proporcion de roedores expuestos a la enfermedad : a3
 ############################################################
 
-sig1=0.07
-sig2=0.08
-sig3=0.05
-sig4=0.07
-sig5=0.08
-sig6=0.05
-sig7=0.07
-sig8=0.07
 
 tspan = np.linspace(0,200,5001)
 
-y0 = np.array([25, 12, 8,12,3,4,3,5])
+y0 = np.array([25, 12, 8,12,43,4,12,32])
 
 
 def f(y, t):
 
-    p = [0.029,0.00025,0.00006,0.027,0.2,2,2,0.52,0.83,1.5,0.002,0.2,0.5,0.2,4]
+    # p = [0.029,0.00025,0.00006,0.027,0.2,2,2,0.52,0.83,1.5,0.002,0.2,0.5,0.2,4]
+    p = [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0]    
     Sh = y[0]
     Eh = y[1]
     Ih = y[2]
